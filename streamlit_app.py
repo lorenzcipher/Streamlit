@@ -3,5 +3,5 @@ import pandas as pd
 
 
 st.write("First App")
-df = pd.read_csv("my_data.csv")
+df = pd.read_csv("titanic-data.csv")
 st.line_chart(df)
