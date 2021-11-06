@@ -32,14 +32,11 @@ lire = pd.read_csv(r"data.csv")
 print(lire)
 
 df = pd.DataFrame(lire)
-st.write(df{df{'pays'}=='brazil'})
+tmp=df{df{'pays'}=='brazil'}
+st.write(tmp)
     
 
 
-for i in df:
-    if i=='UK':
-        st.write(i)
-    
 
     
     
