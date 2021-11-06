@@ -35,16 +35,9 @@ df = pd.DataFrame(lire)
     
 
 
-col1, col2, = st.columns(2)
-
-with col1:
-    chart_data = pd.DataFrame(np.random.randn(50, 3),columns=["a", "b", "c"])
-    st.bar_chart(chart_data)
-
-with col2:
-    st.table(df)
-
-st.map()
+for i in df:
+    if i=='UK':
+        st.write(i)
     
 
     
