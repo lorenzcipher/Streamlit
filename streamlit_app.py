@@ -37,4 +37,4 @@ df.groupby('Country/Region').count().reset_index()['Country/Region'].tolist())
 # by country name
 if len(country_name_input) > 0:
     subset_data = df[df['Country/Region'].isin(country_name_input)]
-view rawmulti_select_widget.py hosted with ❤ by GitHub
+
