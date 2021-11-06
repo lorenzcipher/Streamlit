@@ -7,6 +7,7 @@ import pydeck as pdk
 import altair as alt 
 from datetime import datetime
 from datetime import datetime
+import csv
 
 
 
@@ -27,15 +28,10 @@ ranking_pays = st.sidebar.selectbox('Ranking par pays ', pays)
 if ranking_pays in pays:   
     choix_pays = ranking_pays
 
-st.map()
-
-uploaded_file = st.file_uploader("Choose a file")
-if uploaded_file is not None:
-  df = pd.read_csv(uploaded_file)
- 
-import csvreader = csv.DictReader(open(r"data.csv"))
-for raw in reader:
-    print(raw)
+f= open (r"data.csv")
+myReader = csv.reader(f)
+for row in myReader:
+print(row)
 
     
     
