@@ -33,8 +33,9 @@ uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
   df = pd.read_csv(uploaded_file)
  
-for row in df:
-    st.write(row)
+import csvreader = csv.DictReader(open(r"data.csv"))
+for raw in reader:
+    print(raw)
 
     
     
