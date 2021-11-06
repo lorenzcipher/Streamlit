@@ -27,6 +27,7 @@ ranking_pays = st.sidebar.selectbox('Ranking par pays ', pays)
 if ranking_pays in pays:   
     choix_pays = ranking_pays
 
+st.map()
     
 
 
