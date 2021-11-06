@@ -27,7 +27,7 @@ def load_data():
 df = load_data()
 
 # show data on streamlit
- st.write(df)
+st.write(df)
 
 # Filters UI
 subset_data = df
