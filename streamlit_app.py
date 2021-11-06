@@ -26,7 +26,8 @@ if ranking_pays in pays:
     choix_pays = ranking_pays
 
     
-st.write(annee)
+age = st.slider('How old are you?', 0, 130, 25)
+st.write("I'm ", age, 'years old')
     
     
 
