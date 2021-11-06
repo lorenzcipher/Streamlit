@@ -23,7 +23,10 @@ ranking_pays = st.sidebar.selectbox('Ranking par pays ', pays)
 # let's ask the user which column should be used as Index
 if ranking_pays in pays:   
     choix_pays = ranking_pays
-st.write(choix_pays)
+
+    
+    
+st.write(annee)
 
 
 
