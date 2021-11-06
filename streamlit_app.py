@@ -19,7 +19,7 @@ st.write("Il s’agit de représenter pour la coupe du monde de football (2014, 
 Annee = st.sidebar.slider("Année", 1954, 2014, 1954, 4)
 raking_pays = st.sidebar.selectbox('Ranking par pays ', ('Tous les pays','Germany', 'Brazil','France','Hungray','UK','Argentina','Peru','Poland'))
 
-DATA_URL = ('covid.csv')
+DATA_URL = 'covid.csv'
 def load_data():
     data = pd.read_csv(DATA_URL)
     data['Date'] = pd.to_datetime(data['Date']).dt.strftime('%Y-%m-%d')
