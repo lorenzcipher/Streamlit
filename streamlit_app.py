@@ -35,16 +35,17 @@ df = pd.DataFrame(lire)
     
 
 
-col1, col2, col3 = st.columns(3)
+col1, col2, = st.columns(2)
 
 with col1:
-    st.write("Hello")
+    chart_data = pd.DataFrame(np.random.randn(50, 3),columns=["a", "b", "c"])
+    st.bar_chart(chart_data)
 
 with col2:
-    st.map()
-
-with col3:
     st.table(df)
+
+st.map()
+    
 
     
     
