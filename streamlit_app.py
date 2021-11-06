@@ -28,6 +28,9 @@ if ranking_pays in pays:
     choix_pays = ranking_pays
 
 st.map()
+
+data = pd.read_csv("data.csv")
+st.write(data)
     
 
 
