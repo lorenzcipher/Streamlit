@@ -31,7 +31,7 @@ if ranking_pays in pays:
 f= open (r"data.csv")
 myReader = csv.reader(f)
 for row in myReader:
-print(row)
+    print(row)
 
     
     
