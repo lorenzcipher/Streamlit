@@ -32,7 +32,7 @@ lire = pd.read_csv(r"data.csv")
 print(lire)
 
 df = pd.DataFrame(lire)
-tmp=df[df.Country == 'Brazil']
+tmp=lire[lire.Country == 'Brazil']
 st.write(tmp)
     
 
