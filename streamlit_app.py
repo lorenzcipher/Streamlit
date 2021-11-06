@@ -6,6 +6,7 @@ import numpy as np
 import pydeck as pdk 
 import altair as alt 
 from datetime import datetime
+from datetime import datetime
 
 
 
@@ -24,6 +25,13 @@ ranking_pays = st.sidebar.selectbox('Ranking par pays ', pays)
 if ranking_pays in pays:   
     choix_pays = ranking_pays
 
+    
+
+start_time = st.slider(
+    "When do you start?",
+    value=datetime(2020, 1, 1, 9, 30),
+     format="YY")
+st.write("Start time:", start_time)
     
     
 st.write(annee)
