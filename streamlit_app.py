@@ -43,7 +43,7 @@ with col1:
 with col2:
     st.map()
 
- with col3:
+with col3:
     st.table(df)
 
     
