@@ -31,6 +31,10 @@ if ranking_pays in pays:
 lire = pd.read_csv(r"data.csv")
 print(lire)
 
+df = pd.DataFrame(lire)
+    
+st.table(df)
+
 
     
     
