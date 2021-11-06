@@ -33,7 +33,7 @@ print(lire)
 
 df = pd.DataFrame(lire)
 #tmp=df[df['Country']=='Brazil']
-#st.write(tmp)
+st.write(df)
     
 
 
