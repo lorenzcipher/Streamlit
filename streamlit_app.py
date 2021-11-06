@@ -27,14 +27,8 @@ if ranking_pays in pays:
 
     
 
-start_time = st.slider(
-    "When do you start?",
-    value=datetime(2020, 1, 1, 9, 30),
-     format="YY")
-st.write("Start time:", start_time)
     
     
-st.write(annee)
 
 
 
