@@ -29,8 +29,8 @@ if ranking_pays in pays:
     choix_pays = ranking_pays
 
 f= open (r"data.csv")
-myReader = csv.reader(f)
-for row in myReader:
+df = csv.reader(f)
+for row in df:
     print(row)
 
     
