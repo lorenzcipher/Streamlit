@@ -33,8 +33,18 @@ print(lire)
 
 df = pd.DataFrame(lire)
     
-st.table(df)
 
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.write("Hello")
+
+with col2:
+    st.map()
+
+ with col3:
+    st.table(df)
 
     
     
