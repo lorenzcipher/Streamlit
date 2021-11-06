@@ -28,7 +28,7 @@ ranking_pays = st.sidebar.selectbox('Ranking par pays ', pays)
 if ranking_pays in pays:   
     choix_pays = ranking_pays
 
-lire = pandas.read_csv(r"data.csv")
+lire = pd.read_csv(r"data.csv")
 print(lire)
 
 
