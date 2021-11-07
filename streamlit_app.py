@@ -20,9 +20,9 @@ st.write("Il s’agit de représenter pour la coupe du monde de football (2014, 
 
 df = pd.read_csv("data.csv", sep=",", encoding="utf-8")
 
-pays = list(df["Country"])
+pays = list(set(df["Country"]))
 
-st.write(pays)
+
 
 ranking_pays = st.sidebar.selectbox('Ranking par pays ',pays)
 
