@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np 
 import pydeck as pdk 
 import altair as alt 
-
+import plotly.express as px
 
 
 
@@ -30,6 +30,10 @@ tmp = df[df.Country == ranking_pays]
 totale = list(tmp["Total"])
 del tmp["Total"]
 st.write(tmp)
+
+
+c = alt.Chart(tmp).mark_circle().encode(x='Années', y='Playes', size='Buts', color='Country', tooltip=['Années', 'Playes', 'Buts'])
+st.altair_chart(c, use_container_width=True)
 
 
 
