@@ -25,7 +25,13 @@ pays = list(df["Country"])
 ranking_pays = st.sidebar.selectbox('Ranking par pays ', pays)
 
 tmp = df[df.Country == ranking_pays]
+
+
+totale = list(tmp["Total"])
+del tmp["Total"]
 st.write(tmp)
+
+
 
 
 
