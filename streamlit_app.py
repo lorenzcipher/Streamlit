@@ -33,8 +33,8 @@ st.write(tmp)
 
 
 
-df = pd.DataFrame(np.random.randn(200, 3),columns=['a', 'b', 'c'])
-c = alt.Chart(df).mark_circle().encode(x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
+
+c = alt.Chart(tmp).mark_circle().encode(x='Name', y='Total', size='Country', color='Country', tooltip=['Name', 'Total', 'Country'])
 
 st.altair_chart(c, use_container_width=True)
 
