@@ -22,7 +22,9 @@ df = pd.read_csv("data.csv", sep=",", encoding="utf-8")
 
 pays = list(df["Country"])
 
-ranking_pays = st.sidebar.selectbox('Ranking par pays ', pays)
+st.write(pays)
+
+ranking_pays = st.sidebar.selectbox('Ranking par pays ',pays)
 
 tmp = df[df.Country == ranking_pays]
 
