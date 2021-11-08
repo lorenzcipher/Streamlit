@@ -45,11 +45,10 @@ data = df.T
 
 st.write(data)
 
-'''
-c = alt.Chart(df).mark_circle().encode(x='Years', y='Buts', size='Country', color='Country', tooltip=[df.clomns, df[0], 'Country'])
+c = alt.Chart(data).mark_circle().encode(x='Years', y='Buts', size='Country', color='Country', tooltip=['', '0')
 
 st.altair_chart(c, use_container_width=True)
-'''
+
 
 
 
