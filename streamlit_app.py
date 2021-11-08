@@ -44,7 +44,7 @@ del df["Total"]
 
 
 
-c = alt.Chart(tmp).mark_circle().encode(x='Years', y='Buts', size='Country', color='Country', tooltip=[df.clomns, df[0], 'Country'])
+c = alt.Chart(df).mark_circle().encode(x='Years', y='Buts', size='Country', color='Country', tooltip=[df.clomns, df[0], 'Country'])
 
 st.altair_chart(c, use_container_width=True)
 
