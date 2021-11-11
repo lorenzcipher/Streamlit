@@ -49,9 +49,14 @@ del filtered_df['Total']
 #affichage 
 st.write(filtered_df)
 
-#c = alt.Chart(data).mark_circle().encode(x='Years', y='Buts', size='Country', color='Country', tooltip=['', '0')
+z = pd.DataFrame(
+    np.random.randn(200, 4),
+    columns=['a', 'b', 'c','d'])
 
-#st.altair_chart(c, use_container_width=True)
+c = alt.Chart(z).mark_circle().encode(
+   x='a', y='b', size='c', color='d', tooltip=['a', 'b', 'c','d'])
+
+st.altair_chart(c, use_container_width=True)
 
 
 
