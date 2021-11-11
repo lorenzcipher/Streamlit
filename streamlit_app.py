@@ -10,7 +10,7 @@ import altair as alt
 
 
 
-
+#tableau de bord 
 
 st.sidebar.header("Paramètres")
 st.sidebar.info("Veuilez Selectionnez l'année et le pays que vous voulez savoir le meilleur buteur des coordonnées selectionné")
@@ -18,32 +18,34 @@ st.title("La Coupe Du Monde De Football")
 st.header("Description")
 st.write("Il s’agit de représenter pour la coupe du monde de football (2014, ..., 1954) le meilleur buteur et son pays d’origine ayant le record des buts inscrits par le même joueur en indiquant le nombre de buts inscrits et les éditions dans laquelle il les a inscrit. Les données sont dans le fichier csv suivant.Donnez la représentation visuelle adéquate.")
 
-df = pd.read_csv("data.csv", sep=",", encoding="utf-8")
-'''
+#list par pays 
 pays = list(set(df["Country"]))
-
-
-
 ranking_pays = st.sidebar.selectbox('Ranking par pays ',pays)
 
-tmp = df[df.Country == ranking_pays]
+#importer data
+df = pd.read_csv("data.csv", sep=",", encoding="utf-8")
 
 
-#totale = list(tmp["Total"])
-#del tmp["Total"]
-st.write(tmp)
 
-'''
-pays = list(df["Country"])
-Names = list(df["Name"])
-Total = list(df["Total"])
-del df["Country"]
-del df["Name"]
-del df["Total"]
+#marque du filtrage
+df_mask=df['Country']==ranking_pays
 
-data = df.T
+#data filter dépend le pays
+filtered_df = df[df_mask]
 
-st.write(data)
+#max des buteurs
+max_total = max(df['Total'])
+
+#supprimer les colonnes commune
+del filtered_df['Country']
+del filtered_df['Total']
+
+
+
+
+
+#affichage 
+st.write(filtred_df)
 
 c = alt.Chart(data).mark_circle().encode(x='Years', y='Buts', size='Country', color='Country', tooltip=['', '0')
 
