@@ -53,7 +53,7 @@ Col = Col[1:-1]
 
 z = pd.DataFrame(
     Col,
-    columns=list(range(max_total)))
+    columns=list(range(max_total))
 
 st.write(z)
 
