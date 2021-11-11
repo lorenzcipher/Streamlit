@@ -46,7 +46,7 @@ del filtered_df['Total']
 
 #récupérer les années à partir des columns
 Col = filtered_df.columns.values
-Col.pop(0)
+#Col.pop(0)
 
 #affichage 
 st.write(Col)
