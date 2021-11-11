@@ -47,7 +47,7 @@ del filtered_df['Total']
 
 
 #affichage 
-st.write(filtered_df)
+st.write(filtered_df.colomns)
 '''
 
 z = pd.DataFrame(
