@@ -44,10 +44,12 @@ del filtered_df['Total']
 
 
 
-
+#récupérer les années à partir des columns
+Col = filtered_df.columns
+del Col[0]
 
 #affichage 
-st.write(filtered_df.columns)
+st.write(Col)
 '''
 
 z = pd.DataFrame(
