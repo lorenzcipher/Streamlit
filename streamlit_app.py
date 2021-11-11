@@ -48,7 +48,7 @@ del filtered_df['Total']
 
 #affichage 
 st.write(filtered_df.T)
-
+'''
 
 z = pd.DataFrame(
     filtered_df.T,
@@ -58,7 +58,7 @@ c = alt.Chart(z).mark_circle().encode(
    x='a', y='b', size='a', color='b', tooltip=['a', 'b'])
 
 st.altair_chart(c, use_container_width=True)
-
+'''
 
 
 
