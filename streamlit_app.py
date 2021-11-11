@@ -58,7 +58,7 @@ st.write(l)
 '''
 z = pd.DataFrame(
     Col,
-    columns=l)
+    l)
 
 st.write(z)
 '''
