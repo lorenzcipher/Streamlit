@@ -48,20 +48,23 @@ del filtered_df['Total']
 Col = filtered_df.columns.values
 Col = Col[1:-1]
 
-#affichage 
-st.write(Col)
-'''
+
+
 
 z = pd.DataFrame(
-    filtered_df.T,
-    columns=['a', 'b'])
+    Col,
+    columns=list(range(max_total)))
+
+st.write(z)
+
+'''
 
 c = alt.Chart(z).mark_circle().encode(
    x='a', y='b', size='a', color='b', tooltip=['a', 'b'])
 
 st.altair_chart(c, use_container_width=True)
-'''
 
+'''
 
 
 
