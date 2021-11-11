@@ -47,7 +47,7 @@ del filtered_df['Total']
 
 
 #affichage 
-st.write(filtred_df)
+st.write(filtered_df)
 
 #c = alt.Chart(data).mark_circle().encode(x='Years', y='Buts', size='Country', color='Country', tooltip=['', '0')
 
