@@ -45,7 +45,7 @@ del filtered_df['Total']
 
 
 #récupérer les années à partir des columns
-Col = filtered_df.columns
+Col = filtered_df.columns.values
 
 
 #affichage 
