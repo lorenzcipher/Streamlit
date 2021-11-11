@@ -49,6 +49,10 @@ del filtered_df['Total']
 #affichage 
 st.write(filtered_df)
 
+#test
+test = np.random.randn(200,4)
+st.write(test)
+
 z = pd.DataFrame(
     np.random.randn(200, 4),
     columns=['a', 'b', 'c','d'])
