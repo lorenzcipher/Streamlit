@@ -49,11 +49,11 @@ Col = filtered_df.columns.values
 Col = Col[1:-1]
 
 
-
+l = [i for i in np.arange(0,max_total,1)]
 
 z = pd.DataFrame(
     Col,
-    columns=list(range(max_total))
+    columns=l)
 
 st.write(z)
 
