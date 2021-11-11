@@ -55,13 +55,13 @@ for i in range(max_total):
 
 st.write(l)    
 
-'''
+
 z = pd.DataFrame(
     Col,
     l)
 
 st.write(z)
-'''
+
 '''
 
 c = alt.Chart(z).mark_circle().encode(
