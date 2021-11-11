@@ -44,11 +44,10 @@ del filtered_df['Total']
 
 
 
-#transposé 
-T_filtered_df = np.transpose(filtered_df)
+
 
 #affichage 
-st.write(T_filtered_df)
+st.write(filtered_df)
 '''
 
 z = pd.DataFrame(
