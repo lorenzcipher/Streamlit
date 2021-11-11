@@ -53,12 +53,15 @@ l = list()
 for i in range(max_total):
     l.append(str(i))
 
+st.write(l)    
+
+'''
 z = pd.DataFrame(
     Col,
     columns=l)
 
 st.write(z)
-
+'''
 '''
 
 c = alt.Chart(z).mark_circle().encode(
