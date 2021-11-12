@@ -41,7 +41,7 @@ st.write(data[data['Age'] < 18].groupby(['Sex','Pclass']).mean())
 
 
 
-st.bar_chart(data)
+st.write(data)
     
     
 
