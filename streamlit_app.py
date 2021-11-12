@@ -34,7 +34,8 @@ data = data.drop(['Name','SibSp','Parch','Ticket','Fare','Cabin','Embarked'],axi
 data = data.dropna(axis=0)
 
 #groupe by class
-st.write(data.groupby(['Sex','Pclass']).mean())
+data_stat =data.groupby(['Sex','Pclass']).mean()
+st.write(data_stat)
 
 st.write(data[data['Age'] < 18].groupby(['Sex','Pclass']).mean())
 
@@ -42,12 +43,10 @@ st.write(data[data['Age'] < 18].groupby(['Sex','Pclass']).mean())
 
 
 st.write(data)
-chart_data = pd.DataFrame(
-    np.random.randn(50, 3),
-    columns=["a", "b", "c"])
 
-st.write(chart_data)
-st.bar_chart(chart_data)    
+
+
+st.bar_chart(data_stat)    
     
 
 
