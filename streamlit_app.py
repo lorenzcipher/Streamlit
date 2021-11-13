@@ -53,7 +53,7 @@ def make_pivot (param1, param2):
     return slice_pivot
     return p_chart
 
-
+make_pivot(option[0],option[1])
 
     
 
