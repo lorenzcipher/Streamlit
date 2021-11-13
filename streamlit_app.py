@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from PIL import Image
+import plotly_express as px
 
 
 
@@ -19,7 +20,7 @@ st.write("Les passagers sur le bateau Titanic sont à représenter par 3 classes
 image = Image.open('titanic.jpg')
 st.image(image, caption='Titanic')
 
-st.sidebar.info("Boite à clées :\n-Survivant (1:oui 0:Non)\n-Pclass (Passenger Class): 1,2,3\n-Sex: Male, Female\n-Embarked (Port of Embarkation): C = Cherbourg, Q = Queenstown, S = Southampto")
+st.sidebar.info("Boite à clées :/n-Survivant (1:oui 0:Non)\n-Pclass (Passenger Class): 1,2,3\n-Sex: Male, Female\n-Embarked (Port of Embarkation): C = Cherbourg, Q = Queenstown, S = Southampto")
 
 options = st.sidebar.multiselect(
      'Choisi Deux paramétres à comparais ',
@@ -41,6 +42,8 @@ def make_pivot (param1, param2):
     df_slice = data[[param1, param2, 'PassengerId']]
     slice_pivot = df_slice.pivot_table(index=[param1], columns=[param2],aggfunc=np.size, fill_value=0)
     
+     fig1 = px.bar(slice_pivot, x=str(options[0]), y=str(options[1]), color='PassengerId', height=400)
+     p_chart = st.write(fig1)   
     #p_chart = st.bar_chart(slice_pivot)
     #for p in p_chart.patches:
     #    p_chart.annotate(str(p.get_height()), (p.get_x() * 1.05, p.get_height() * 1.01))
@@ -48,13 +51,13 @@ def make_pivot (param1, param2):
     return slice_pivot
     #return p_chart
 
-if not options:
+if not options or len(options)<2:
      st.warning('Selectionne les deux parametres à comparer')
 else:
      st.write(make_pivot(options[0],options[1]))
     
 
-    
+ 
 
 
 
