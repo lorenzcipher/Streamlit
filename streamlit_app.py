@@ -52,7 +52,7 @@ if not options:
      st.warning('Selectionne les deux parametres à comparer')
 else:
      st.write(make_pivot(options[0],options[1]))
-
+     st.bar_chart(make_pivot(options[0],options[1]))
 
     
 
