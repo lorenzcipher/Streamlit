@@ -48,7 +48,7 @@ def make_pivot (param1, param2):
     return slice_pivot
     #return p_chart
 
-if not liste:
+if not options:
      st.warning('Selectionne les deux parametres à comparer')
 else:
      st.write(make_pivot(options[0],options[1]))
