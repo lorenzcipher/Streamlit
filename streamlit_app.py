@@ -30,7 +30,7 @@ options = st.sidebar.multiselect(
      'Choisi Deux paramétres à comparais ',
      ["Survived", 'Pclass', 'Sex', 'Embarked'])
 
-st.write('You selected:', options[0])
+
 
 #ouvrir un fichier csv
 data = pd.read_csv('titanic-data.csv')
@@ -46,7 +46,7 @@ def make_pivot (param1, param2):
     df_slice = df[[param1, param2, 'PassengerId']]
     slice_pivot = df_slice.pivot_table(index=[param1], columns=[param2],aggfunc=np.size, fill_value=0)
     
-    p_chart = slice_pivot.plot.bar()
+    p_chart = st.bar_chart(slice_pivot)
     for p in p_chart.patches:
         p_chart.annotate(str(p.get_height()), (p.get_x() * 1.05, p.get_height() * 1.01))
     
