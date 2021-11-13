@@ -4,9 +4,10 @@ Bibliothéques pour la manipulation des dataFrame et les chart
 import streamlit as st
 import pandas as pd
 import numpy as np
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 import seaborn as sns
 import csv
+from PIL import Image
 
 
 
@@ -17,14 +18,11 @@ import csv
 #tableau de bord 
 
 st.sidebar.header("Paramètres")
-st.sidebar.info("Veuilez Selectionnez l'année et le pays que vous voulez savoir le meilleur buteur des coordonnées selectionné")
-st.title("La Coupe Du Monde De Football")
+st.title("Titanic Visualisation")
 st.header("Description")
-st.write('''Les passagers sur le bateau Titanic sont à représenter par 3 classes (hommes, femmes,
-enfants). Sur chaque compartiment (Affaire, busines, troisième classe, membres
-d’équipage). On veut représenter les survivants et les noyés par classe (H, F, E) et par
-compartiment. Donnez la représentation visuelle adéquate.''')
+st.write("Les passagers sur le bateau Titanic sont à représenter par 3 classes (hommes, femmes,enfants). Sur chaque compartiment (Affaire, busines, troisième classe, membresd’équipage). On veut représenter les survivants et les noyés par classe (H, F, E) et parcompartiment. Donnez la représentation visuelle adéquate.")
 
+st.sidebar.info("Boite à selection des analyses")
 
 
 #ouvrir un fichier csv
