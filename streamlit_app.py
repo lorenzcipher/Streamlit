@@ -19,12 +19,8 @@ st.write("Les passagers sur le bateau Titanic sont à représenter par 3 classes
 image = Image.open('titanic.jpg')
 st.image(image, caption='Titanic')
 
-st.sidebar.info('''Boite à clées :\n
-                       -Survivant (1:oui 0:Non)\n
-                       -Pclass (Passenger Class): 1,2,3\n
-                       -Sex: Male, Female\n
-                       -Embarked (Port of Embarkation): C = Cherbourg, Q = Queenstown, S = Southampto
-                       ''')
+st.sidebar.info("Boite à clées :\n-Survivant (1:oui 0:Non)\n-Pclass (Passenger Class): 1,2,3\n-Sex: Male, Female\n-Embarked (Port of Embarkation): C = Cherbourg, Q = Queenstown, S = Southampto
+                       ")
 
 options = st.sidebar.multiselect(
      'Choisi Deux paramétres à comparais ',
@@ -43,7 +39,7 @@ data = data.dropna(axis=0)
 
 #fonction avec deux paramétres pour créer une dataframe et faire la relation entre les deux paramétres 
 def make_pivot (param1, param2):
-    df_slice = df[[param1, param2, 'PassengerId']]
+    df_slice = data[[param1, param2, 'PassengerId']]
     slice_pivot = df_slice.pivot_table(index=[param1], columns=[param2],aggfunc=np.size, fill_value=0)
     
     #p_chart = st.bar_chart(slice_pivot)
