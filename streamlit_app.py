@@ -30,7 +30,7 @@ options = st.sidebar.multiselect(
      'Choisi Deux paramétres à comparais ',
      ["Survived", 'Pclass', 'Sex', 'Embarked'])
 
-st.write('You selected:', options)
+st.write('You selected:', options[0])
 
 #ouvrir un fichier csv
 data = pd.read_csv('titanic-data.csv')
