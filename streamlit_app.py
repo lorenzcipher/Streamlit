@@ -26,8 +26,11 @@ st.sidebar.info('''Boite à clées :
                        *Embarked (Port of Embarkation): C = Cherbourg, Q = Queenstown, S = Southampto
                        ''')
 
-option = st.sidebar.selectbox('Selectionnez : ',('Relation entre passengers survivants et booking class', 'Relation entre passengers survivants et leurs sex', "Relation between passengers survivant et port d'embarkation"))
+options = st.sidebar.multiselect(
+     'Choisi Deux paramétres à comparais ',
+     ["Survived", 'Pclass', 'Sex', 'Embarked'])
 
+st.write('You selected:', options)
 
 #ouvrir un fichier csv
 data = pd.read_csv('titanic-data.csv')
