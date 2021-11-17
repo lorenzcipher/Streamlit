@@ -45,14 +45,14 @@ def make_pivot (param1, param2):
     df_slice = data[[param1, param2, 'PassengerId']]
     slice_pivot = df_slice.pivot_table(index=[param1], columns=[param2],aggfunc=np.size, fill_value=0)
     
-     #fig1 = px.bar(slice_pivot, x=str(options[0]), y=str(options[1]), color='PassengerId', height=400)
-     #p_chart = st.write(fig1)   
+     fig1 = px.bar(slice_pivot, x=str(options[0]), y=str(options[1]), color='PassengerId', height=400)
+     p_chart = st.write(fig1)   
     #p_chart = st.bar_chart(slice_pivot)
     #for p in p_chart.patches:
     #    p_chart.annotate(str(p.get_height()), (p.get_x() * 1.05, p.get_height() * 1.01))
     
     return slice_pivot
-    #return p_chart
+    return p_chart
 
 if not options or len(options)<2:
      st.warning('Selectionne les deux parametres à comparer')
