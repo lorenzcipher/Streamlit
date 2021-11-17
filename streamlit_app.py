@@ -20,10 +20,10 @@ st.write("Les passagers sur le bateau Titanic sont à représenter par 3 classes
 image = Image.open('titanic.jpg')
 st.image(image, caption='Titanic')
 
-st.sidebar.info("Boite à clées :
+st.sidebar.info('''Boite à clées :
 -Survivant (1:oui 0:Non) 
 -Pclass (Passenger Class): 1,2,3 
--Sex: Male, Female\n-Embarked (Port of Embarkation): C = Cherbourg, Q = Queenstown, S = Southampto")
+-Sex: Male, Female\n-Embarked (Port of Embarkation): C = Cherbourg, Q = Queenstown, S = Southampto''')
 
 options = st.sidebar.multiselect(
      'Choisi Deux paramétres à comparais ',
