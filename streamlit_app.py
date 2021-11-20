@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from PIL import Image
-from sklearn.preprocessing import LabelEncoder
+
 #import plotly_express as px
 
 
