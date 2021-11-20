@@ -36,7 +36,7 @@ image = Image.open('as.jpg')
 
 #ouvrir un fichier csv
 data = pd.read_csv('train.csv')
-data.replace('0113eba6-6928-461a-b994-35a0b2eb9f4e','0')
+data.replace('0113eba6-6928-461a-b994-35a0b2eb9f4e','*')
 
 
 
